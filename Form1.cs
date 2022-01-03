@@ -16,5 +16,10 @@ namespace Proiect_Florea__Hazard_prevention_
         {
             InitializeComponent();
         }
+
+        private void load_btn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
