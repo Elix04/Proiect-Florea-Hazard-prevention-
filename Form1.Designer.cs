@@ -38,8 +38,8 @@ namespace Proiect_Florea__Hazard_prevention_
             this.modifiedCode = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.modifiedLinesTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // load_btn
@@ -118,14 +118,6 @@ namespace Proiect_Florea__Hazard_prevention_
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(623, 435);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(236, 147);
-            this.listBox1.TabIndex = 8;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -135,13 +127,22 @@ namespace Proiect_Florea__Hazard_prevention_
             this.label4.TabIndex = 9;
             this.label4.Text = "Modified Lines";
             // 
+            // modifiedLinesTextBox
+            // 
+            this.modifiedLinesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.modifiedLinesTextBox.Location = new System.Drawing.Point(623, 436);
+            this.modifiedLinesTextBox.Multiline = true;
+            this.modifiedLinesTextBox.Name = "modifiedLinesTextBox";
+            this.modifiedLinesTextBox.Size = new System.Drawing.Size(236, 146);
+            this.modifiedLinesTextBox.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 594);
+            this.Controls.Add(this.modifiedLinesTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.modifiedCode);
             this.Controls.Add(this.label2);
@@ -168,8 +169,8 @@ namespace Proiect_Florea__Hazard_prevention_
         private System.Windows.Forms.ListBox modifiedCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox modifiedLinesTextBox;
     }
 }
 
