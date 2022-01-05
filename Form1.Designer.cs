@@ -30,12 +30,12 @@ namespace Proiect_Florea__Hazard_prevention_
         private void InitializeComponent()
         {
             this.load_btn = new System.Windows.Forms.Button();
-            this.originalCode = new System.Windows.Forms.ListBox();
-            this.originalTraces = new System.Windows.Forms.ListBox();
+            this.originalCodeBox = new System.Windows.Forms.ListBox();
+            this.originalTracesBox = new System.Windows.Forms.ListBox();
             this.fix_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.modifiedCode = new System.Windows.Forms.ListBox();
+            this.modifiedCodeBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,21 +52,21 @@ namespace Proiect_Florea__Hazard_prevention_
             this.load_btn.UseVisualStyleBackColor = true;
             this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
             // 
-            // originalCode
+            // originalCodeBox
             // 
-            this.originalCode.FormattingEnabled = true;
-            this.originalCode.Location = new System.Drawing.Point(107, 42);
-            this.originalCode.Name = "originalCode";
-            this.originalCode.Size = new System.Drawing.Size(236, 355);
-            this.originalCode.TabIndex = 1;
+            this.originalCodeBox.FormattingEnabled = true;
+            this.originalCodeBox.Location = new System.Drawing.Point(107, 42);
+            this.originalCodeBox.Name = "originalCodeBox";
+            this.originalCodeBox.Size = new System.Drawing.Size(236, 355);
+            this.originalCodeBox.TabIndex = 1;
             // 
-            // originalTraces
+            // originalTracesBox
             // 
-            this.originalTraces.FormattingEnabled = true;
-            this.originalTraces.Location = new System.Drawing.Point(365, 42);
-            this.originalTraces.Name = "originalTraces";
-            this.originalTraces.Size = new System.Drawing.Size(236, 355);
-            this.originalTraces.TabIndex = 2;
+            this.originalTracesBox.FormattingEnabled = true;
+            this.originalTracesBox.Location = new System.Drawing.Point(365, 42);
+            this.originalTracesBox.Name = "originalTracesBox";
+            this.originalTracesBox.Size = new System.Drawing.Size(236, 355);
+            this.originalTracesBox.TabIndex = 2;
             // 
             // fix_btn
             // 
@@ -97,13 +97,13 @@ namespace Proiect_Florea__Hazard_prevention_
             this.label2.Text = "Original Traces ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // modifiedCode
+            // modifiedCodeBox
             // 
-            this.modifiedCode.FormattingEnabled = true;
-            this.modifiedCode.Location = new System.Drawing.Point(623, 42);
-            this.modifiedCode.Name = "modifiedCode";
-            this.modifiedCode.Size = new System.Drawing.Size(236, 355);
-            this.modifiedCode.TabIndex = 6;
+            this.modifiedCodeBox.FormattingEnabled = true;
+            this.modifiedCodeBox.Location = new System.Drawing.Point(623, 42);
+            this.modifiedCodeBox.Name = "modifiedCodeBox";
+            this.modifiedCodeBox.Size = new System.Drawing.Size(236, 355);
+            this.modifiedCodeBox.TabIndex = 6;
             // 
             // label3
             // 
@@ -144,12 +144,12 @@ namespace Proiect_Florea__Hazard_prevention_
             this.Controls.Add(this.modifiedLinesTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.modifiedCode);
+            this.Controls.Add(this.modifiedCodeBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fix_btn);
-            this.Controls.Add(this.originalTraces);
-            this.Controls.Add(this.originalCode);
+            this.Controls.Add(this.originalTracesBox);
+            this.Controls.Add(this.originalCodeBox);
             this.Controls.Add(this.load_btn);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -161,12 +161,12 @@ namespace Proiect_Florea__Hazard_prevention_
         #endregion
 
         private System.Windows.Forms.Button load_btn;
-        private System.Windows.Forms.ListBox originalCode;
-        private System.Windows.Forms.ListBox originalTraces;
+        private System.Windows.Forms.ListBox originalCodeBox;
+        private System.Windows.Forms.ListBox originalTracesBox;
         private System.Windows.Forms.Button fix_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox modifiedCode;
+        private System.Windows.Forms.ListBox modifiedCodeBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
