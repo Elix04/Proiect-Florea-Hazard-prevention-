@@ -54,8 +54,10 @@ namespace Proiect_Florea__Hazard_prevention_
 
         private void fix_btn_Click(object sender, EventArgs e)
         {
-            //TODO algorithm and read parsed lines
-            //TODO show results in Modified Code + Modified Lines (you choose)
+            ReArrange reArrange= new MergeImmediate(modifiableAssemblyLines, originalTracesLines);
+            modifiableAssemblyLines = abstractRearrangement.Rearrange();
+            modifiableAssemblyLines.ForEach(line => ModifiedLinesListBox.Items.Add(line));
+            modifiableAssemblyLines.ForEach(s => ModifiedLinesTextBox.AppendText(s + Environment.NewLine));
         }
 
         // PS putem scapa de modificare tot cod
