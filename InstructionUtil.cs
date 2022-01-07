@@ -1,12 +1,11 @@
-﻿namespace Proiect_Florea__Hazard_prevention_
-{
-    internal class InstructionUtil
-    {
+﻿using System.Linq;
 
+    public static class InstructionUtil
+    {
         private static readonly string[] BranchMnemonics = new string[] { "BT", "BF", "BSR", "BRA" };
 
         private static readonly InstructionType[] LoadStoreInstructionTypes =
-            new InstructionType[] { InstructionType.Load, InstructionType.Store };
+            new InstructionType[] {InstructionType.Load, InstructionType.Store};
 
         public static bool IsBranchInstructionWithLabel(string instruction) => BranchMnemonics.Any(instruction.Contains);
         public static bool IsTrap(string instruction) => instruction.Contains("TRAP");
@@ -69,12 +68,10 @@
         }
     }
 
-    public enum InstructionType
-    {
-
-        Arithmetic = 0,
-        Branch = 1,
-        Store = 2,
-        Load = 3
-    }
+public enum InstructionType
+{
+    Arithmetic = 0,
+    Branch = 1,
+    Store = 2,
+    Load = 3
 }

@@ -1,15 +1,14 @@
-﻿
-namespace Proiect_Florea__Hazard_prevention_
+﻿namespace Proiect_Hazard_prevention
 {
     partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -29,148 +28,240 @@ namespace Proiect_Florea__Hazard_prevention_
         /// </summary>
         private void InitializeComponent()
         {
-            this.load_btn = new System.Windows.Forms.Button();
-            this.originalCodeBox = new System.Windows.Forms.ListBox();
-            this.originalTracesBox = new System.Windows.Forms.ListBox();
-            this.fix_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.LoadFileButton = new System.Windows.Forms.Button();
+            this.ExportButton = new System.Windows.Forms.Button();
+            this.OriginalLinesListBox = new System.Windows.Forms.ListBox();
+            this.FixIssuesButton = new System.Windows.Forms.Button();
+            this.CreateMegaBlockButton = new System.Windows.Forms.Button();
+            this.OriginalTracesListBox = new System.Windows.Forms.ListBox();
+            this.MegaBlockListBox = new System.Windows.Forms.ListBox();
+            this.ModifiedLinesListBox = new System.Windows.Forms.ListBox();
+            this.OriginalLinesTextBox = new System.Windows.Forms.TextBox();
+            this.ModifiedLinesTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.modifiedCodeBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
-            this.modifiedLinesTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // load_btn
-            // 
-            this.load_btn.Location = new System.Drawing.Point(107, 473);
-            this.load_btn.Name = "load_btn";
-            this.load_btn.Size = new System.Drawing.Size(168, 51);
-            this.load_btn.TabIndex = 0;
-            this.load_btn.Text = "Load File";
-            this.load_btn.UseVisualStyleBackColor = true;
-            this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
-            // 
-            // originalCodeBox
-            // 
-            this.originalCodeBox.FormattingEnabled = true;
-            this.originalCodeBox.Location = new System.Drawing.Point(107, 42);
-            this.originalCodeBox.Name = "originalCodeBox";
-            this.originalCodeBox.Size = new System.Drawing.Size(236, 355);
-            this.originalCodeBox.TabIndex = 1;
-            // 
-            // originalTracesBox
-            // 
-            this.originalTracesBox.FormattingEnabled = true;
-            this.originalTracesBox.Location = new System.Drawing.Point(365, 42);
-            this.originalTracesBox.Name = "originalTracesBox";
-            this.originalTracesBox.Size = new System.Drawing.Size(236, 355);
-            this.originalTracesBox.TabIndex = 2;
-            // 
-            // fix_btn
-            // 
-            this.fix_btn.Location = new System.Drawing.Point(107, 530);
-            this.fix_btn.Name = "fix_btn";
-            this.fix_btn.Size = new System.Drawing.Size(168, 52);
-            this.fix_btn.TabIndex = 3;
-            this.fix_btn.Text = "Fix Code";
-            this.fix_btn.UseVisualStyleBackColor = true;
-            this.fix_btn.Click += new System.EventHandler(this.fix_btn_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 23);
+            this.label1.Location = new System.Drawing.Point(34, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Original  Code";
+            this.label1.Size = new System.Drawing.Size(264, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Load a file";
+            // 
+            // LoadFileButton
+            // 
+            this.LoadFileButton.Location = new System.Drawing.Point(102, 45);
+            this.LoadFileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.LoadFileButton.Name = "LoadFileButton";
+            this.LoadFileButton.Size = new System.Drawing.Size(64, 23);
+            this.LoadFileButton.TabIndex = 2;
+            this.LoadFileButton.Text = "Browse";
+            this.LoadFileButton.UseVisualStyleBackColor = true;
+            this.LoadFileButton.Click += new System.EventHandler(this.LoadFileButton_Click);
+            // 
+            // ExportButton
+            // 
+            this.ExportButton.Location = new System.Drawing.Point(564, 32);
+            this.ExportButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(198, 36);
+            this.ExportButton.TabIndex = 4;
+            this.ExportButton.Text = "Export";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            // 
+            // OriginalLinesListBox
+            // 
+            this.OriginalLinesListBox.FormattingEnabled = true;
+            this.OriginalLinesListBox.ItemHeight = 15;
+            this.OriginalLinesListBox.Location = new System.Drawing.Point(50, 104);
+            this.OriginalLinesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.OriginalLinesListBox.Name = "OriginalLinesListBox";
+            this.OriginalLinesListBox.Size = new System.Drawing.Size(205, 364);
+            this.OriginalLinesListBox.TabIndex = 5;
+            // 
+            // FixIssuesButton
+            // 
+            this.FixIssuesButton.Location = new System.Drawing.Point(402, 32);
+            this.FixIssuesButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.FixIssuesButton.Name = "FixIssuesButton";
+            this.FixIssuesButton.Size = new System.Drawing.Size(130, 36);
+            this.FixIssuesButton.TabIndex = 8;
+            this.FixIssuesButton.Text = "Fix issues";
+            this.FixIssuesButton.UseVisualStyleBackColor = true;
+            this.FixIssuesButton.Click += new System.EventHandler(this.FixIssuesButton_Click);
+            // 
+            // CreateMegaBlockButton
+            // 
+            this.CreateMegaBlockButton.Location = new System.Drawing.Point(225, 32);
+            this.CreateMegaBlockButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.CreateMegaBlockButton.Name = "CreateMegaBlockButton";
+            this.CreateMegaBlockButton.Size = new System.Drawing.Size(124, 36);
+            this.CreateMegaBlockButton.TabIndex = 10;
+            this.CreateMegaBlockButton.Text = "Create Mega Block";
+            this.CreateMegaBlockButton.UseVisualStyleBackColor = true;
+            this.CreateMegaBlockButton.Click += new System.EventHandler(this.CreateMegaBlockButton_Click);
+            // 
+            // OriginalTracesListBox
+            // 
+            this.OriginalTracesListBox.FormattingEnabled = true;
+            this.OriginalTracesListBox.ItemHeight = 15;
+            this.OriginalTracesListBox.Location = new System.Drawing.Point(261, 104);
+            this.OriginalTracesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.OriginalTracesListBox.Name = "OriginalTracesListBox";
+            this.OriginalTracesListBox.Size = new System.Drawing.Size(205, 364);
+            this.OriginalTracesListBox.TabIndex = 11;
+            // 
+            // MegaBlockListBox
+            // 
+            this.MegaBlockListBox.FormattingEnabled = true;
+            this.MegaBlockListBox.ItemHeight = 15;
+            this.MegaBlockListBox.Location = new System.Drawing.Point(474, 104);
+            this.MegaBlockListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MegaBlockListBox.Name = "MegaBlockListBox";
+            this.MegaBlockListBox.Size = new System.Drawing.Size(300, 364);
+            this.MegaBlockListBox.TabIndex = 12;
+            // 
+            // ModifiedLinesListBox
+            // 
+            this.ModifiedLinesListBox.FormattingEnabled = true;
+            this.ModifiedLinesListBox.ItemHeight = 15;
+            this.ModifiedLinesListBox.Location = new System.Drawing.Point(780, 104);
+            this.ModifiedLinesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ModifiedLinesListBox.Name = "ModifiedLinesListBox";
+            this.ModifiedLinesListBox.Size = new System.Drawing.Size(205, 364);
+            this.ModifiedLinesListBox.TabIndex = 13;
+            // 
+            // OriginalLinesTextBox
+            // 
+            this.OriginalLinesTextBox.Location = new System.Drawing.Point(50, 512);
+            this.OriginalLinesTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.OriginalLinesTextBox.Multiline = true;
+            this.OriginalLinesTextBox.Name = "OriginalLinesTextBox";
+            this.OriginalLinesTextBox.Size = new System.Drawing.Size(205, 204);
+            this.OriginalLinesTextBox.TabIndex = 14;
+            // 
+            // ModifiedLinesTextBox
+            // 
+            this.ModifiedLinesTextBox.Location = new System.Drawing.Point(780, 512);
+            this.ModifiedLinesTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ModifiedLinesTextBox.Multiline = true;
+            this.ModifiedLinesTextBox.Name = "ModifiedLinesTextBox";
+            this.ModifiedLinesTextBox.Size = new System.Drawing.Size(205, 204);
+            this.ModifiedLinesTextBox.TabIndex = 15;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 23);
+            this.label2.Location = new System.Drawing.Point(50, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Original Traces ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // modifiedCodeBox
-            // 
-            this.modifiedCodeBox.FormattingEnabled = true;
-            this.modifiedCodeBox.Location = new System.Drawing.Point(623, 42);
-            this.modifiedCodeBox.Name = "modifiedCodeBox";
-            this.modifiedCodeBox.Size = new System.Drawing.Size(236, 355);
-            this.modifiedCodeBox.TabIndex = 6;
+            this.label2.Size = new System.Drawing.Size(186, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Original Lines:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(620, 23);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(261, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Modified Code";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.label3.Size = new System.Drawing.Size(186, 17);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Original Traces:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(620, 419);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(474, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Modified Lines";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(186, 17);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "MegaBlock:";
             // 
-            // modifiedLinesTextBox
+            // label5
             // 
-            this.modifiedLinesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.modifiedLinesTextBox.Location = new System.Drawing.Point(623, 436);
-            this.modifiedLinesTextBox.Multiline = true;
-            this.modifiedLinesTextBox.Name = "modifiedLinesTextBox";
-            this.modifiedLinesTextBox.Size = new System.Drawing.Size(236, 146);
-            this.modifiedLinesTextBox.TabIndex = 10;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(780, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(186, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Modified Lines:";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(50, 492);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(186, 17);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Original Code TEXT:";
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(780, 492);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(186, 17);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Modified Code TEXT:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 594);
-            this.Controls.Add(this.modifiedLinesTextBox);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1046, 764);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.modifiedCodeBox);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.ModifiedLinesTextBox);
+            this.Controls.Add(this.OriginalLinesTextBox);
+            this.Controls.Add(this.ModifiedLinesListBox);
+            this.Controls.Add(this.MegaBlockListBox);
+            this.Controls.Add(this.OriginalTracesListBox);
+            this.Controls.Add(this.CreateMegaBlockButton);
+            this.Controls.Add(this.FixIssuesButton);
+            this.Controls.Add(this.OriginalLinesListBox);
+            this.Controls.Add(this.ExportButton);
+            this.Controls.Add(this.LoadFileButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fix_btn);
-            this.Controls.Add(this.originalTracesBox);
-            this.Controls.Add(this.originalCodeBox);
-            this.Controls.Add(this.load_btn);
+            this.Location = new System.Drawing.Point(15, 15);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.Button load_btn;
-        private System.Windows.Forms.ListBox originalCodeBox;
-        private System.Windows.Forms.ListBox originalTracesBox;
-        private System.Windows.Forms.Button fix_btn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ExportButton;
+        private System.Windows.Forms.Button LoadFileButton;
+        private System.Windows.Forms.ListBox OriginalLinesListBox;
+        private System.Windows.Forms.Button FixIssuesButton;
+        private System.Windows.Forms.Button CreateMegaBlockButton;
+        private System.Windows.Forms.ListBox OriginalTracesListBox;
+        private System.Windows.Forms.ListBox MegaBlockListBox;
+        private System.Windows.Forms.ListBox ModifiedLinesListBox;
+        private System.Windows.Forms.TextBox OriginalLinesTextBox;
+        private System.Windows.Forms.TextBox ModifiedLinesTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox modifiedCodeBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox modifiedLinesTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

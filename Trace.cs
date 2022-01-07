@@ -1,19 +1,8 @@
 ﻿using System;
-
-namespace Proiect_Florea__Hazard_prevention_
-{
-    public enum TraceType
-    {
-        Arithmetic = 0,
-        Branch = 1,
-        Store = 2,
-        Load = 3
-    }
-
     public class Trace
     {
         public string FULL { get; }
-
+        
         public TraceType TYPE { get; }
 
         public int CURRENT_ADDRESS { get; }
@@ -67,4 +56,10 @@ namespace Proiect_Florea__Hazard_prevention_
             return FULL;
         }
     }
+public enum TraceType
+{
+    Arithmetic = 0,
+    Branch = 1,
+    Store = 2,
+    Load = 3
 }

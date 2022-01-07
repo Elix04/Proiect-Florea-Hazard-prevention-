@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proiect_Florea__Hazard_prevention_
-{
-    class Util
+﻿using System.Linq;
+    public static class Util
     {
         private static readonly string[] AllowedImmediateMergingCombinations =
         {
@@ -30,7 +23,7 @@ namespace Proiect_Florea__Hazard_prevention_
             {
                 if (InstructionUtil.IsLoadOrStoreInstruction(instructionTwo.FULL))
                 {
-                   
+                    // TODO: FIGURE SHIT OUT
                     if (instructionTwo.MNEMONIC == "ST" && instructionTwo.SOURCE1 == instructionOne.DESTINATION)
                     {
                         return true;
@@ -39,7 +32,13 @@ namespace Proiect_Florea__Hazard_prevention_
                     return false;
                 }
 
-                return new[] { instructionTwo.SOURCE1, instructionTwo.SOURCE2 }.Contains(instructionOne.DESTINATION);
+                // TODO: take into account Source2 is null
+//                if (instructionOne.DESTINATION == instructionTwo.SOURCE1)
+//                {
+//                    return true;
+//                }
+//                if(instructionOne.D)
+                return new[] {instructionTwo.SOURCE1, instructionTwo.SOURCE2}.Contains(instructionOne.DESTINATION);
             }
 
             return false;
@@ -99,7 +98,7 @@ namespace Proiect_Florea__Hazard_prevention_
             }
             else if (instructionOne.MNEMONIC == "LD" && instructionTwo.MNEMONIC == "ST")
             {
-               
+                // TODO ADD CODE TO HANDLE THIS
                 return areDestinationAddressesEqual || false;
             }
 
@@ -129,4 +128,3 @@ namespace Proiect_Florea__Hazard_prevention_
             return combination;
         }
     }
-}

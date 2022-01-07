@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Proiect_Florea__Hazard_prevention_
-{
-    internal class ReArrange
+    public class AbstractRearrangement
     {
         protected readonly List<string> AssemblyLines;
         private readonly List<Trace> originalTracesLines;
@@ -13,7 +13,7 @@ namespace Proiect_Florea__Hazard_prevention_
 
         private List<string> handledLines = new List<string>();
 
-        protected ReArrange(List<string> assemblyLines, List<Trace> originalTracesLines)
+        protected AbstractRearrangement(List<string> assemblyLines, List<Trace> originalTracesLines)
         {
             this.AssemblyLines = assemblyLines;
             this.originalTracesLines = originalTracesLines;
@@ -21,7 +21,8 @@ namespace Proiect_Florea__Hazard_prevention_
 
         public List<string> Rearrange()
         {
-          
+            
+
             var builder = new MegaBlockBuilder();
             var megaInstructions = builder.Build(AssemblyLines, originalTracesLines);
 
@@ -56,7 +57,7 @@ namespace Proiect_Florea__Hazard_prevention_
 
                 if (Util.CanApplyMemoryAntiAlias(megaInstructionOne, megaInstructionTwo))
                 {
-                  
+                   
                     handledLines.Add(megaInstructionOne.ToString());
                 }
             }
@@ -95,10 +96,7 @@ namespace Proiect_Florea__Hazard_prevention_
             var instructionOne = megaInstructionOne.Instruction;
             var instructionTwo = megaInstructionTwo.Instruction;
 
-            /**TODO:
-             *  - instructiune relationala
-             *  - instructiune gardata
-            **/
+            
             var mergedInstruction = instructionTwo.MNEMONIC switch
             {
                 "ADD" => GenerateNewMovMergingInstruction(instructionTwo, instructionOne),
@@ -191,7 +189,7 @@ namespace Proiect_Florea__Hazard_prevention_
                 }
             }
 
-            var additionMnemonics = new string[] { "ADD", "SUB" };
+            var additionMnemonics = new string[] {"ADD", "SUB"};
             if (additionMnemonics.Contains(mnemonicInstructionOne) && additionMnemonics.Contains(mnemonicInstructionTwo))
             {
                 var source2InstructionOne = Convert.ToInt32(instructionOne.SOURCE2.Remove(0, 1));
@@ -211,4 +209,3 @@ namespace Proiect_Florea__Hazard_prevention_
             }
         }
     }
-}

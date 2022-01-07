@@ -1,88 +1,100 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proiect_Florea__Hazard_prevention_
+namespace Proiect_Hazard_prevention
 {
     public partial class Form1 : Form
     {
-        public List<string> original_asm_lines;
-        public List<string> modified_asm_lines;
-        public List<Trace> original_Trace_Lines;
-        public string fileSelected = "";
-        
-        //public List<Trace> origAsmLines; 
-        
-        //TODO trace class 
-
-
+        private List<string> originalAssemblyLines;
+        private List<string> modifiableAssemblyLines;
+        private List<Trace> originalTracesLines;
+        private List<MegaInstruction> megaInstructions;
+        private string selectedFile = "";
 
         public Form1()
         {
             InitializeComponent();
 
-            modifiedLinesTextBox.ScrollBars = ScrollBars.Vertical;
+            OriginalLinesTextBox.ScrollBars = ScrollBars.Vertical;
+            ModifiedLinesTextBox.ScrollBars = ScrollBars.Vertical;
         }
 
-        private void load_btn_Click(object sender, EventArgs e)
+        private void LoadFileButton_Click(object sender, EventArgs e)
         {
-            originalCodeBox.Items.Clear();
-            originalTracesBox.Items.Clear();
+            OriginalLinesListBox.Items.Clear();
+            OriginalTracesListBox.Items.Clear();
 
-            var fileReader = new OpenFileReader();
+            var fileReader = new FileReader();
 
-            //Load file and parse Original ASM code to list 
-            original_asm_lines = fileReader.PromptUserForFile("INS (*.ins)|*.ins").ReadLinesFromFile();
-            original_asm_lines = original_asm_lines.Select(s => Regex.Replace(s, @"[^0-9a-zA-Z:,-_# /* *()""]+", "")).ToList();
+            originalAssemblyLines = fileReader
+                .PromptUserForFile("INS (*.ins)|*.ins")
+                .ReadLinesFromFile();
+            originalAssemblyLines = originalAssemblyLines
+                .Select(s => Regex.Replace(s, @"[^0-9a-zA-Z:,-_# /* *()""]+", ""))
+                .ToList();
 
+            selectedFile = fileReader.SelectedFIle;
 
-            fileSelected = fileReader.file_select;
-            modified_asm_lines = original_asm_lines.ToList();
+            modifiableAssemblyLines = originalAssemblyLines.ToList();
 
-
-            var originalTraceLines = new OpenFileReader().PromptUserForFile("TRC (*.trc)|*.trc").ReadLinesFromFile();
+            var originalTraceLines = new FileReader()
+                .PromptUserForFile("TRC (*.trc)|*.trc")
+                .ReadLinesFromFile();
 
             var regex = new Regex("[ ]{2,}", RegexOptions.None);
-            var original_traces = new List<string>();
+            var originalTraces = new List<string>();
 
             originalTraceLines.ForEach(line =>
             {
-                var chestii = regex.Replace(line, " ");
-                var ceva = chestii.Split(' ');
+                var stuff = regex.Replace(line, " ");
+                var smth = stuff.Split(" ");
 
-                for(var i = 0; i < ceva.Length - 1; i += 3)
+                for (var i = 0; i < smth.Length - 1; i += 3)
                 {
-                    original_traces.Add($"{ceva[i]} {ceva[i + 1]} {ceva[i + 2]}");
+                    originalTraces.Add($"{smth[i]} {smth[i + 1]} {smth[i + 2]}");
                 }
             });
 
-           
-
-            original_asm_lines.ForEach(s => originalCodeBox.Items.Add(s));
-            original_traces.ForEach(s => originalTracesBox.Items.Add(s));
-            original_Trace_Lines = original_traces.Select(trace => new Trace(trace)).ToList();
+            originalAssemblyLines.ForEach(s => OriginalLinesListBox.Items.Add(s));
+            originalAssemblyLines.ForEach(s => OriginalLinesTextBox.AppendText(s + Environment.NewLine));
+            originalTraces.ForEach(s => OriginalTracesListBox.Items.Add(s));
+            originalTracesLines = originalTraces.Select(trace => new Trace(trace)).ToList();
         }
 
-        private void fix_btn_Click(object sender, EventArgs e)
+        private void FixIssuesButton_Click(object sender, EventArgs e)
         {
-            ReArrange reArrange= new MergeImmediate(modifiableAssemblyLines, originalTracesLines);
+            AbstractRearrangement abstractRearrangement = new ImmediateMerging(modifiableAssemblyLines, originalTracesLines);
             modifiableAssemblyLines = abstractRearrangement.Rearrange();
             modifiableAssemblyLines.ForEach(line => ModifiedLinesListBox.Items.Add(line));
             modifiableAssemblyLines.ForEach(s => ModifiedLinesTextBox.AppendText(s + Environment.NewLine));
         }
 
-        // PS putem scapa de modificare tot cod
-
-        private void label2_Click(object sender, EventArgs e)
+        private void CreateMegaBlockButton_Click(object sender, EventArgs e)
         {
+            var builder = new MegaBlockBuilder();
+            megaInstructions = builder.Build(originalAssemblyLines, originalTracesLines);
+            megaInstructions.ForEach(item => MegaBlockListBox.Items.Add(item.ToString()));
+        }
 
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            if (selectedFile == "")
+            {
+                MessageBox.Show("NO FILE SELECTED");
+                return;
+            }
+
+            var path = selectedFile.Insert(selectedFile.Length - 4, "-improved");
+            using (var streamWriter = File.CreateText(path))
+            {
+                modifiableAssemblyLines.ForEach(streamWriter.WriteLine);
+            }
+
+            MessageBox.Show("File Saved successfully");
         }
     }
 }
