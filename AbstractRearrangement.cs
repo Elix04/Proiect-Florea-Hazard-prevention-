@@ -21,7 +21,6 @@ using System.Text;
 
         public List<string> Rearrange()
         {
-            
 
             var builder = new MegaBlockBuilder();
             var megaInstructions = builder.Build(AssemblyLines, originalTracesLines);

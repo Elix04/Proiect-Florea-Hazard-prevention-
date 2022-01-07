@@ -12,7 +12,7 @@ namespace Proiect_Hazard_prevention
         private List<string> originalAssemblyLines;
         private List<string> modifiableAssemblyLines;
         private List<Trace> originalTracesLines;
-        private List<MegaInstruction> megaInstructions;
+        
         private string selectedFile = "";
 
         public Form1()
@@ -73,12 +73,6 @@ namespace Proiect_Hazard_prevention
             modifiableAssemblyLines.ForEach(s => ModifiedLinesTextBox.AppendText(s + Environment.NewLine));
         }
 
-        private void CreateMegaBlockButton_Click(object sender, EventArgs e)
-        {
-            var builder = new MegaBlockBuilder();
-            megaInstructions = builder.Build(originalAssemblyLines, originalTracesLines);
-            megaInstructions.ForEach(item => MegaBlockListBox.Items.Add(item.ToString()));
-        }
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
