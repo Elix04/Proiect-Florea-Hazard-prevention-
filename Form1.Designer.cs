@@ -34,13 +34,11 @@
             this.OriginalLinesListBox = new System.Windows.Forms.ListBox();
             this.FixIssuesButton = new System.Windows.Forms.Button();
             this.OriginalTracesListBox = new System.Windows.Forms.ListBox();
-            this.MegaBlockListBox = new System.Windows.Forms.ListBox();
             this.ModifiedLinesListBox = new System.Windows.Forms.ListBox();
             this.OriginalLinesTextBox = new System.Windows.Forms.TextBox();
             this.ModifiedLinesTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -108,16 +106,6 @@
             this.OriginalTracesListBox.Size = new System.Drawing.Size(291, 604);
             this.OriginalTracesListBox.TabIndex = 11;
             // 
-            // MegaBlockListBox
-            // 
-            this.MegaBlockListBox.FormattingEnabled = true;
-            this.MegaBlockListBox.ItemHeight = 25;
-            this.MegaBlockListBox.Location = new System.Drawing.Point(677, 173);
-            this.MegaBlockListBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MegaBlockListBox.Name = "MegaBlockListBox";
-            this.MegaBlockListBox.Size = new System.Drawing.Size(427, 604);
-            this.MegaBlockListBox.TabIndex = 12;
-            // 
             // ModifiedLinesListBox
             // 
             this.ModifiedLinesListBox.FormattingEnabled = true;
@@ -165,17 +153,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Original Traces:";
             // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(677, 140);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(266, 28);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "MegaBlock:";
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -215,13 +192,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ModifiedLinesTextBox);
             this.Controls.Add(this.OriginalLinesTextBox);
             this.Controls.Add(this.ModifiedLinesListBox);
-            this.Controls.Add(this.MegaBlockListBox);
             this.Controls.Add(this.OriginalTracesListBox);
             this.Controls.Add(this.FixIssuesButton);
             this.Controls.Add(this.OriginalLinesListBox);
@@ -244,13 +219,11 @@
         private System.Windows.Forms.ListBox OriginalLinesListBox;
         private System.Windows.Forms.Button FixIssuesButton;
         private System.Windows.Forms.ListBox OriginalTracesListBox;
-        private System.Windows.Forms.ListBox MegaBlockListBox;
         private System.Windows.Forms.ListBox ModifiedLinesListBox;
         private System.Windows.Forms.TextBox OriginalLinesTextBox;
         private System.Windows.Forms.TextBox ModifiedLinesTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
