@@ -67,7 +67,7 @@ namespace Proiect_Hazard_prevention
 
         private void FixIssuesButton_Click(object sender, EventArgs e)
         {
-            AbstractRearrangement abstractRearrangement = new ImmediateMerging(modifiableAssemblyLines, originalTracesLines);
+            InstructionFix abstractRearrangement = new ImmediateMerging(modifiableAssemblyLines, originalTracesLines);
             modifiableAssemblyLines = abstractRearrangement.Rearrange();
             modifiableAssemblyLines.ForEach(line => ModifiedLinesListBox.Items.Add(line));
             modifiableAssemblyLines.ForEach(s => ModifiedLinesTextBox.AppendText(s + Environment.NewLine));

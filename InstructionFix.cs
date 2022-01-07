@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-    public class AbstractRearrangement
+    public class InstructionFix
     {
         protected readonly List<string> AssemblyLines;
         private readonly List<Trace> originalTracesLines;
@@ -13,7 +13,7 @@ using System.Text;
 
         private List<string> handledLines = new List<string>();
 
-        protected AbstractRearrangement(List<string> assemblyLines, List<Trace> originalTracesLines)
+        protected InstructionFix(List<string> assemblyLines, List<Trace> originalTracesLines)
         {
             this.AssemblyLines = assemblyLines;
             this.originalTracesLines = originalTracesLines;
