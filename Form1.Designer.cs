@@ -46,19 +46,19 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(49, 80);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(125, 541);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 60);
+            this.label1.Size = new System.Drawing.Size(242, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Load a file";
             // 
             // LoadFileButton
             // 
-            this.LoadFileButton.Location = new System.Drawing.Point(146, 75);
-            this.LoadFileButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.LoadFileButton.Location = new System.Drawing.Point(125, 561);
+            this.LoadFileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LoadFileButton.Name = "LoadFileButton";
-            this.LoadFileButton.Size = new System.Drawing.Size(91, 38);
+            this.LoadFileButton.Size = new System.Drawing.Size(130, 35);
             this.LoadFileButton.TabIndex = 2;
             this.LoadFileButton.Text = "Browse";
             this.LoadFileButton.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(806, 53);
-            this.ExportButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ExportButton.Location = new System.Drawing.Point(1086, 572);
+            this.ExportButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(283, 60);
+            this.ExportButton.Size = new System.Drawing.Size(198, 36);
             this.ExportButton.TabIndex = 4;
             this.ExportButton.Text = "Export";
             this.ExportButton.UseVisualStyleBackColor = true;
@@ -78,19 +78,19 @@
             // OriginalLinesListBox
             // 
             this.OriginalLinesListBox.FormattingEnabled = true;
-            this.OriginalLinesListBox.ItemHeight = 25;
-            this.OriginalLinesListBox.Location = new System.Drawing.Point(71, 173);
-            this.OriginalLinesListBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.OriginalLinesListBox.ItemHeight = 15;
+            this.OriginalLinesListBox.Location = new System.Drawing.Point(50, 104);
+            this.OriginalLinesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.OriginalLinesListBox.Name = "OriginalLinesListBox";
-            this.OriginalLinesListBox.Size = new System.Drawing.Size(291, 604);
+            this.OriginalLinesListBox.Size = new System.Drawing.Size(205, 364);
             this.OriginalLinesListBox.TabIndex = 5;
             // 
             // FixIssuesButton
             // 
-            this.FixIssuesButton.Location = new System.Drawing.Point(574, 53);
-            this.FixIssuesButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.FixIssuesButton.Location = new System.Drawing.Point(261, 561);
+            this.FixIssuesButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FixIssuesButton.Name = "FixIssuesButton";
-            this.FixIssuesButton.Size = new System.Drawing.Size(186, 60);
+            this.FixIssuesButton.Size = new System.Drawing.Size(130, 36);
             this.FixIssuesButton.TabIndex = 8;
             this.FixIssuesButton.Text = "Fix issues";
             this.FixIssuesButton.UseVisualStyleBackColor = true;
@@ -99,96 +99,92 @@
             // OriginalTracesListBox
             // 
             this.OriginalTracesListBox.FormattingEnabled = true;
-            this.OriginalTracesListBox.ItemHeight = 25;
-            this.OriginalTracesListBox.Location = new System.Drawing.Point(373, 173);
-            this.OriginalTracesListBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.OriginalTracesListBox.ItemHeight = 15;
+            this.OriginalTracesListBox.Location = new System.Drawing.Point(263, 104);
+            this.OriginalTracesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.OriginalTracesListBox.Name = "OriginalTracesListBox";
-            this.OriginalTracesListBox.Size = new System.Drawing.Size(291, 604);
+            this.OriginalTracesListBox.Size = new System.Drawing.Size(205, 364);
             this.OriginalTracesListBox.TabIndex = 11;
             // 
             // ModifiedLinesListBox
             // 
             this.ModifiedLinesListBox.FormattingEnabled = true;
-            this.ModifiedLinesListBox.ItemHeight = 25;
-            this.ModifiedLinesListBox.Location = new System.Drawing.Point(1114, 173);
-            this.ModifiedLinesListBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ModifiedLinesListBox.ItemHeight = 15;
+            this.ModifiedLinesListBox.Location = new System.Drawing.Point(476, 104);
+            this.ModifiedLinesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ModifiedLinesListBox.Name = "ModifiedLinesListBox";
-            this.ModifiedLinesListBox.Size = new System.Drawing.Size(291, 604);
+            this.ModifiedLinesListBox.Size = new System.Drawing.Size(205, 364);
             this.ModifiedLinesListBox.TabIndex = 13;
             // 
             // OriginalLinesTextBox
             // 
-            this.OriginalLinesTextBox.Location = new System.Drawing.Point(71, 853);
-            this.OriginalLinesTextBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.OriginalLinesTextBox.Location = new System.Drawing.Point(1079, 104);
+            this.OriginalLinesTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.OriginalLinesTextBox.Multiline = true;
             this.OriginalLinesTextBox.Name = "OriginalLinesTextBox";
-            this.OriginalLinesTextBox.Size = new System.Drawing.Size(291, 337);
+            this.OriginalLinesTextBox.Size = new System.Drawing.Size(205, 364);
             this.OriginalLinesTextBox.TabIndex = 14;
             // 
             // ModifiedLinesTextBox
             // 
-            this.ModifiedLinesTextBox.Location = new System.Drawing.Point(1114, 853);
-            this.ModifiedLinesTextBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ModifiedLinesTextBox.Location = new System.Drawing.Point(866, 104);
+            this.ModifiedLinesTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ModifiedLinesTextBox.Multiline = true;
             this.ModifiedLinesTextBox.Name = "ModifiedLinesTextBox";
-            this.ModifiedLinesTextBox.Size = new System.Drawing.Size(291, 337);
+            this.ModifiedLinesTextBox.Size = new System.Drawing.Size(205, 364);
             this.ModifiedLinesTextBox.TabIndex = 15;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(71, 140);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(50, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 33);
+            this.label2.Size = new System.Drawing.Size(186, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Original Lines:";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(373, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(261, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(266, 28);
+            this.label3.Size = new System.Drawing.Size(186, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Original Traces:";
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(1114, 140);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(474, 84);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(266, 28);
+            this.label5.Size = new System.Drawing.Size(186, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "Modified Lines:";
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(71, 820);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(1079, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(266, 28);
+            this.label6.Size = new System.Drawing.Size(186, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Original Code TEXT:";
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(1114, 820);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(866, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(266, 28);
+            this.label7.Size = new System.Drawing.Size(186, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Modified Code TEXT:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1494, 1273);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(1335, 620);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -204,7 +200,7 @@
             this.Controls.Add(this.LoadFileButton);
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(15, 15);
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
